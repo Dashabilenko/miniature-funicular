@@ -1,0 +1,210 @@
+
+								/* main menu */
+
+.menu{
+	text-align:center;
+	font-size: 0;
+	z-index: 15;
+	position: relative;
+}
+.menu li {
+	font-size: 40px;
+	background: pink;
+	display: inline-block;
+	position: relative;
+	transition: background 1s ;
+}
+.menu li:hover{
+	background: paleturquoise;
+}
+.menu li+li{
+	border-left: solid palegoldenrod 2px;
+}
+.menu li a{
+	text-decoration: none;
+	display: inline-block;
+	top: 100%;
+	text-transform: uppercase;
+	padding: 20px 15px 20px 55px;
+}
+.blocks{
+	padding: 0 40px 0px 0;
+}
+.menu ul{
+	display: grid;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	height: 0;
+	transition: height .8s;
+	overflow: hidden;
+
+}
+.menu li:hover ul{
+	height: 600%;
+	/* transform: rotateY(-90deg);
+	transform: translateY(.1px); */
+}
+.menu ul li{
+	border-left: none;
+	border-top: 2px palegoldenrod solid;
+}
+
+.menu ul .float:hover .floatmenu{
+	overflow: visible;
+}
+    
+
+                   			 /* pseudo elements */
+
+.menu li a::before{
+	content: "";
+	position: absolute;
+	left: 3px;
+	top: 15px;
+	background: url(../sprites.png);
+	width: 48px;
+	height: 48px;
+}
+.menu ul li a::before{
+	background-position: -80px 0;
+	height: 30px;
+	width: 30px;
+	top: 20px;
+	position: absolute;
+}
+.menu .home a::before{
+	background-position: -110px 0;
+}
+.menu .gallary a::before{
+	background-position: -158px 0;
+}
+.menu .blocks a::before{
+	background-position: -206px 0;
+}
+.menu .blocks li a::before{
+	background-position: -80px 0;
+}
+.blocks>a::after{
+	content: "";
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	background: url(../sprites.png);
+	width: 20px;
+	height: 20px;
+	background-position: -40px 0;
+}
+.blocks:hover a::after{
+	background-position: -20px 0;
+}
+
+#float a::after{
+	content: "";
+	position: absolute;
+	right: 5px;
+	top: 20px;
+	background: url(../sprites.png);
+	width: 20px;
+	height: 20px;
+	background-position: -60px 0;
+}
+#float:hover a::after{
+	background-position: 0 0;
+}
+#grid a::after{
+	content: "";
+	position: absolute;
+	right: 5px;
+	top: 20px;
+	background: url(../sprites.png);
+	width: 20px;
+	height: 20px;
+	background-position: -60px 0;
+}
+#grid:hover a::after{
+	background-position: 0 0;
+}
+
+
+							/* social medias menus */
+.socmenu{	
+    text-align: center;
+    font-size: 0;
+}
+.socmenu li {
+    display: inline-block;
+    font-size: 25px;
+    margin: 25px 30px;
+}
+
+.socmenu li a{
+    width: 48px;
+    height: 48px;
+    display: block ;
+    background: url(../sprites.png);
+	background-position: -254px 0;
+}
+.socmenu li+li a{
+    background-position: -494px 0;
+}
+.socmenu li+li+li a{
+    background-position: -350px 0;
+}
+.socmenu li a:hover{
+    background-position: -302px 0;
+}
+.socmenu li+li a:hover{
+    background-position: -446px 0;
+}
+.socmenu li+li+li a:hover{
+    background-position: -398px 0;
+}
+
+
+								/* hover me  */
+
+.hoverme{
+	right: 0;
+	top: 50%;
+	font-size: 0;
+	transform: rotate(45deg);
+	padding: 10px 50px 35px 30px;
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	display: block;
+
+}
+.hoverme li {
+	font-size: 25px;
+	display: inline-block;
+	list-style: none;
+	text-decoration: none;
+	position: relative;
+	overflow: hidden;
+}
+.hoverme li a{
+	display: block;
+	background: url(../sprites.png);
+	width: 48px;
+	height: 48px;
+	background-position: -110px 0;
+	overflow: hidden;
+}
+.hoverme_ganz{
+	background: pink;
+	right: 0;
+	top: 50%;
+	position: fixed;
+	padding: 20px 30px;
+	transform: rotate(-90deg);
+	transition: all .8s ease;
+}
+.hoverme_ganz:hover {
+	background: paleturquoise;
+}
+
+.hoverme_ganz:hover .hoverme {
+	height: 200%;
+}
